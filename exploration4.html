@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mdvy96: Exploration 4</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+        <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+	<h2> CS7830 Assignment Log </h2>
+	<div id = "classAssignments">
+		<table class="table">
+                		<tr>
+	    				<th>Name</th>
+	    				<th>Due Date</th>
+	    				<th>Points</th>
+                		</tr>
+			<tr v-for = "Assignment in Assignments">
+			    <td>{{Assignment.name}}</td>
+                            <td>{{Assignment.dueDate}}</td>
+                            <td>{{Assignment.points}}</td>
+			</tr>
+		</table>
+
+	</div>
+
+	<script type="text/javascript">
+		const app = new Vue({
+			el: '#classAssignments',
+			data: {
+				Assignments: [
+                                    {
+                                    	name: "Challenge Questions: Introduction to Course",
+                                    	dueDate: "Aug 24 at 11:59pm",
+                                    	points: 105
+                                    },
+                                    {
+                                        name: "Challenge 1: Configure your Server",
+                                        dueDate: "Aug 31 at 11:59pm ",
+                                        points: 100
+                                    },
+                                    {
+                                        name: "Challenge 1: Question Set",
+                                        dueDate: "Aug 31 at 11:59pm",
+                                        points: 100
+                                    },
+                                    {
+                                        name: "Challenge 2: Error Pages, PHP, and GitHub IO",
+                                        dueDate: " Sep 7 at 11:59pm",
+                                        points: 100
+                                    },
+                                    {
+                                        name: "Challenge 2: Servers, Apache, Git and GitHub",
+                                        dueDate: "Due Sep 7 at 11:59pm ",
+                                        points: 100
+                                    },
+                                    {
+                                        name: "Exploration #1 Discussion",
+                                        dueDate: "Sep 14 at 11:59pm",
+                                        points: 105
+                                    },
+                                    {
+                                        name: "Exploration #1",
+                                        dueDate: "Sep 14 at 11:59pm",
+                                        points: 120
+                                    },
+                                    {
+                                        name: "Challenge 3: Single-Page Application Improvements",
+                                        dueDate: "Sep 21 at 11:59pm",
+                                        points: 105
+                                    },
+				]
+                        }
+		});
+	</script>
+</body>
+</html>
